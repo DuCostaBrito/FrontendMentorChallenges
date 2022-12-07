@@ -81,6 +81,12 @@ body {
   padding: 15px 10px;
 }
 
+@media(min-width: 30em){
+  body {
+    padding: 25vh 0;
+  }
+}
+
 .product > * {
   margin-bottom: .5rem;
 }
@@ -93,6 +99,16 @@ body {
 .container {
   background-color: hsl(30, 38%, 92%);
   border-radius: 1vh;
+}
+
+@media(min-width: 30em){
+  .container {
+    display: grid;
+    width: 50%;
+    margin: 0 auto;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+  }
 }
 
 .product {
