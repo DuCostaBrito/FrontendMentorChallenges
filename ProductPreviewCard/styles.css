@@ -75,7 +75,74 @@ select {
   }
 }
 
-
+/* Styles */
 body {
-    background-color: ;
+  background-color: hsl(325, 48%, 78%);
+  padding: 15px 10px;
+}
+
+.product > * {
+  margin-bottom: .5rem;
+}
+
+.container img {
+  border-top-left-radius: 1vh;
+  border-top-right-radius: 1vh;
+}
+
+.container {
+  background-color: hsl(30, 38%, 92%);
+  border-radius: 1vh;
+}
+
+.product {
+  padding: 1rem;
+}
+
+.product-name{
+  font-size: 1.5rem;
+}
+
+.product-name::before {
+  content: "Perfume";
+  opacity: .7;
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+}
+
+.product-discription{
+  opacity: .6;
+  font-size: 14px;
+}
+
+.product-price{
+  display: flex;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: rgb(38, 124, 38);
+}
+
+.product-price::after {
+  color: gray;
+  align-self: center;
+  content: "$169.99";
+  opacity: .7;
+  font-size: .7rem;
+  margin-left: .6rem;
+  text-decoration-line: line-through;
+}
+
+button {
+  padding: 1rem;
+  color: white;
+  background-color: rgb(38, 124, 38);
+  width: 100%;
+  border: 0;
+  border-radius: 1vh;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: rgb(15, 49, 15);
 }
