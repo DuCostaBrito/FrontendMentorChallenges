@@ -1,0 +1,159 @@
+:root {
+    --color-primary-300: hsl(31, 77%, 52%);
+    --color-primary-500: hsl(184, 100%, 22%);
+    --color-primary-800: hsl(179, 100%, 13%);
+
+    --color-neutral-100: hsla(0, 0%, 100%, 0.75);
+    --color-neutral-200: hsl(0, 0%, 95%);
+
+    --ff-neutral: 'Lexend Deca', sans-serif;
+    --ff-accent: 'Big Shoulders Display', cursive;
+
+    --fw-light: 400;
+    --fw-semi-bold: 700;
+
+    --fs-p: 15px;
+}
+
+/* CSS reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Styling */
+body {
+    color: var(--color-neutral-100);
+    background-color: var(--color-neutral-200);
+    font-family: var(--ff-neutral);
+    font-size: var(--fs-p);
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+article{
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+@media (min-width: 40em) {
+    section {
+        display: grid;
+        overflow: hidden;
+        border-radius: .5vh;
+        place-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 900px;
+    }
+    article{
+        gap:4rem;
+    }
+}
+
+article > h1 {
+    color:var(--color-neutral-200);
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    text-transform: uppercase;
+}
+
+.article__sedans {
+    --color-buttom: var(--color-primary-300);
+    background-color: var(--color-primary-300);
+}
+
+.article__suvs {
+    --color-buttom: var(--color-primary-500);
+    background-color: var(--color-primary-500);
+}
+
+.article__luxury {
+    --color-buttom: var(--color-primary-800);
+    background-color: var(--color-primary-800);
+}
+
+button {
+    font-family: var(--ff-neutral);
+    color: var(--color-buttom);
+    font-weight: var(--fw-semi-bold);
+    border-radius: 2rem;
+    border: 0;
+    line-height: 3rem;
+    width: 50%;
+}
+
+button:is(:hover, :focus) {
+    
+    background-color: var(--color-buttom);
+    color: var(--color-neutral-200);
+    border: 1px solid var(--color-neutral-200);
+    line-height: calc(3rem - 2px);
+}
+
+@media (min-width: 40em) {
+    button {
+        width: 70%;
+    }
+}
