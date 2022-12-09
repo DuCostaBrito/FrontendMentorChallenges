@@ -1,0 +1,170 @@
+:root {
+
+  --color-primary-orange: hsl(34, 97%, 64%);
+  --color-primary-cyan: hsl(180, 62%, 55%);
+  --color-primary-blue: hsl(212, 86%, 64%);
+  --color-primary-red: hsl(0, 78%, 62%);
+
+  --color-neutral-100: hsl(0, 0%, 98%);
+  --color-neutral-500: hsl(229, 6%, 66%);
+  --color-neutral-900: hsl(234, 12%, 34%);
+
+  --ff-neutral: 'Poppins', sans-serif;
+
+  --fw-light: 200;
+  --fw-semi-bold: 400;
+  --fw-bold: 600;
+}
+
+/* CSS reset */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+/* styling */
+
+body {
+  overflow: hidden;
+  font-size: 15px;
+  font-family: var(--ff-neutral);
+  font-weight: var(--fw-light);
+  color: var(--color-neutral-900);
+  background-color: var(--color-neutral-100);
+  margin: 2rem;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 50em) {
+  body {
+    overflow: auto;
+  }
+  header {
+    padding-bottom: 1.5rem;
+  }
+}
+
+header h2,
+header h1 {
+  font-size: 1.5rem;
+}
+
+header h2{
+  color: var(--color-neutral-500);
+  font-weight: var(--fw-light);
+}
+
+.project__discription h1 {
+  font-weight: var(--fw-bold);
+  padding-bottom: 1.2rem;
+}
+
+.project__discription p,
+.service__discription {
+  opacity: .5;
+  font-weight: var(--fw-semi-bold);
+  padding-bottom: 2rem;
+}
+
+.articles__cards {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+}
+
+@media (max-width: 50em) {
+  .articles__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.supervisor__card,
+.calculator__card {
+  align-self: center;
+}
+
+.articles__cards article {
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: .5vh;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 1.5rem;
+  border-top: 5px solid var(--border-color);
+}
+
+
+.articles__cards article img {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+}
+
+.service__name {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+}
+
+.service__discription {
+  font-size: .75rem;
+}

@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
   <title>Frontend Mentor | Four card feature section</title>
 </head>
+
 <body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
+  <main>
+    <header class="project__discription">
+      <h2>Reliable, efficient delivery</h2>
+      <h1>Powered by Technology</h1>
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+    </header>
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
+    <section class="articles__cards">
+      <article class="supervisor__card" style="--border-color: var(--color-primary-cyan)">
+        <h2 class="service__name">Supervisor</h2>
+        <p class="service__discription">
+          Monitors activity to identify project roadblocks
+        </p>
+        <img src="images/icon-supervisor.svg" alt="Imagem decorativa" />
+      </article>
+      
+      <div class="middle">
+        <article class="team__builder__card" style="--border-color: var(--color-primary-red)">
+          <h2 class="service__name">Team Builder</h2>
+          <p class="service__discription">
+            Scans our talent network to create the optimal team for your
+            project
+          </p>
+          <img src="images/icon-team-builder.svg" alt="Imagem decorativa" />
+        </article>
 
-  Supervisor
-  Monitors activity to identify project roadblocks
+        <article class="karma__card" style="--border-color: var(--color-primary-orange)">
+          <h2 class="service__name">Karma</h2>
+          <p class="service__discription">
+            Regularly evaluates our talent to ensure quality
+          </p>
+          <img src="images/icon-karma.svg" alt="Imagem decorativa" />
+        </article>
+      </div>
 
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-
-  </footer>
+      <article class="calculator__card" style="--border-color: var(--color-primary-blue)">
+        <h2 class="service__name">Calculator</h2>
+        <p class="service__discription">
+          Uses data from past projects to provide better delivery estimates
+        </p>
+        <img src="images/icon-calculator.svg" alt="Imagem decorativa" />
+      </article>
+    </section>
+  </main>
 </body>
+
 </html>
