@@ -1,0 +1,188 @@
+:root {
+
+    --color-primary-300: hsl(179, 47%, 52%);
+    --color-primary-400: hsl(179, 62%, 43%);
+    --color-primary-yellow: hsl(71, 73%, 54%);
+
+    --color-neutral-200: hsl(204, 43%, 93%);
+    --color-neutral-600: hsl(218, 22%, 67%);
+
+    --fs-small: 1rem;
+
+    --ff-neutral: 'Karla', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/* CSS reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Utilities classes */
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* Styling */
+
+body {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    font-family: var(--ff-neutral);
+    background-color: var(--color-neutral-200);
+    color: var(--color-neutral-600);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: .5vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+header {
+    background-color: hsl(0, 0%, 100%);
+}
+
+header,
+div>section {
+    padding: 1.5rem;
+    gap: 1.1rem;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+header h1 {
+    font-weight: var(--fw-bold);
+    color: var(--color-primary-400);
+
+}
+
+header h3 {
+    color: var(--color-primary-yellow);
+    font-weight: var(--fw-bold);
+}
+
+
+.subscription-box {
+    color: hsl(0, 0%, 100%);
+    background-color: var(--color-primary-400);
+}
+
+.price-box {
+    gap: 1rem;
+    line-height: 1.8rem;
+}
+
+.price-box .price {
+    font-size: 1.8rem;
+}
+
+.price-box .price-after {
+    opacity: .6;
+}
+
+.subscription-box button {
+    border: 0;
+    border-radius: .5vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--color-primary-yellow);
+    color: hsl(0, 0%, 100%);
+    padding: .8rem;
+}
+
+.info-box {
+    color: hsl(0, 0%, 100%);
+    background-color: var(--color-primary-300);
+}
+
+.info-list li {
+    opacity: .7;
+}
+
+@media (min-width: 50em) {
+    .box-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header,
+    div>section {
+        padding: 3rem;
+    }
+}
