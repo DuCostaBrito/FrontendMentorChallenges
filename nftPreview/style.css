@@ -5,6 +5,7 @@
   --color-neutral-900: hsl(217, 54%, 11%);
   --color-neutral-800: hsl(216, 50%, 16%);
   --color-neutral-600: hsl(215, 32%, 27%);
+  --color-neutral-400: hsl(216, 50%, 70%);
   --color-neutral-100: hsl(0, 0%, 100%);
 
   --fs-small: 18px;
@@ -95,24 +96,81 @@ h6 {
   isolation: isolate;
 }
 
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
 /* General styling */
 
 body {
   background-color: var(--color-neutral-900);
-  color: var(--color-neutral-600);
+  color: var(--color-neutral-400);
+  font-weight: var(--fw-semi-bold);
+  font-family: var(--ff-neutral);
 }
 
 main {
+  grid-template-columns: 1fr;
+  grid-template-rows: 90vh;
+  place-items: center;
   padding: 2rem;
-  padding-top: max();
 }
 
 .card {
-  display: grid;
-  gap: .7rem;
+  gap: 1rem;
   max-width: 400px;
-  margin-inline: auto;
-  border-radius: 1rem;
-  padding: max(2vh, 1rem);
+  border-radius: 1vh;
+  padding: 1.5rem;
   background-color: var(--color-neutral-800);
+}
+
+.card > img {
+  border-radius: 1vh;
+}
+
+.crypto-id {
+  color: var(--color-neutral-100);
+  font-size: 1.7rem;
+}
+
+.bottom-wrapper {
+  justify-content: space-between;
+}
+
+.bottom-wrapper img {
+  object-fit: contain;
+}
+
+.price-wrapper,
+.time-left{
+  gap: .5rem;
+  
+}
+
+.price {
+  color: var(--color-primary-500);
+}
+
+.line-1 {
+  height: 1px;
+  background: var(--color-neutral-600);
+}
+
+.crypto-creator {
+  gap: 1rem;
+  align-items: center;
+}
+
+.crypto-creator > img {
+  height: 40px;
+  border: 1px solid var(--color-neutral-100);
+  border-radius: 50%;
+}
+
+.crypto-creator .name {
+  color: var(--color-neutral-100);
 }
