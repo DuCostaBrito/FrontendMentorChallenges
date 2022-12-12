@@ -1,7 +1,7 @@
 :root {
 
     --color-neutral-300: hsl(243, 100%, 93%);
-    --color-neutral-600: hsl(229, 7%, 55%);
+    --color-neutral-600: hsl(231, 8%, 69%);
     --color-neutral-800: hsl(228, 56%, 26%);
     --color-neutral-900: hsl(229, 57%, 11%);
 
@@ -92,4 +92,65 @@ select {
     }
 }
 
+/* utilities classes */
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
 /* general styling */
+body {
+    background: url("images/bg-mobile.png") no-repeat;
+    color: var(--color-neutral-600);
+    font-family: var(--ff-regular);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-small);
+    background-size: cover;
+    padding: 5rem 1rem;
+}
+
+@media (min-width: 40em) {
+    body {  
+        padding: 0;
+        background: no-repeat  center bottom/100% url("images/bg-desktop.png");
+        background-color: var(--color-neutral-900);
+    }
+}
+
+main{
+    gap: 1rem;
+}
+
+main section {
+    background: var(--color-neutral-800);
+    padding: 2rem;
+}
+
+.shortcuts-section {
+    border-radius: 1.5vh 6rem 1.5vh 1.5vh;
+    gap: 2rem;
+}
+
+.shortcuts {
+    gap: 1rem;
+}
+
+.shortcuts img{
+    background: var(--color-neutral-900);
+    object-fit: contain;
+    padding: .7rem;
+    border-radius: 1.5vh;
+}
+
+.storage-data {
+    border-radius: 1.5vh;
+    text-align: center;
+    gap: .5rem;
+}
+
+.used-storage {
+    color: var(--color-neutral-300);
+}
