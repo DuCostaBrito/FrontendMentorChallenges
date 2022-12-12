@@ -43,7 +43,7 @@ html:focus-within {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 /* Set core body defaults */
@@ -89,7 +89,7 @@ body {
     font-size: var(--fs-p);
     display: grid;
     place-content: center;
-    margin: 1rem;
+    padding: 1rem;
 }
 
 article{
@@ -101,14 +101,14 @@ article{
 @media (min-width: 40em) {
     section {
         display: grid;
-        overflow: hidden;
+        overflow: hizdden;
         border-radius: .5vh;
         place-content: center;
         grid-template-columns: 1fr 1fr 1fr;
         max-width: 900px;
     }
     article{
-        gap:4rem;
+        gap:1rem;
     }
 }
 
