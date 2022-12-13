@@ -9,8 +9,8 @@
   <title>Frontend Mentor | Fylo data storage component</title>
 </head>
 <body>
-  <main class="grid">
-    <section class="shortcuts-section | grid">
+  <main>
+    <section class="shortcuts-section">
       <img class="logo" src="images/logo.svg" alt="logo icon">
       <div class="shortcuts | flex">
         <img src="images/icon-document.svg" alt="Document">
@@ -22,15 +22,16 @@
       <p>You've used <span class="used-storage">815 GB</span> of your storage</p>
       <div class="free-storage">
         <div class="bar | flex">
-          <div class="progress"></div>
+          <div class="progress">
+            <div class="ball"></div>
+          </div>
         </div>
         <div class="lable | flex">
-          <div>0 GB</div>
-          <div>1000 GB</div>
+          <span>0 GB</span>
+          <span>1000 GB</span>
         </div>
-
       </div>
-      <p class="storage-left"> 185 <span>GB Left</span>  </p> 
+      <p class="storage-left | flex"> <span>185</span> GB Left</p> 
     </section>
   </main>
 </body>
